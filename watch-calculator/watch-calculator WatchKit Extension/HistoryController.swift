@@ -11,8 +11,6 @@ import WatchKit
 
 class HistoryController : WKInterfaceController
 {
-    @IBOutlet var table : WKInterfaceTable!
-    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -22,14 +20,6 @@ class HistoryController : WKInterfaceController
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-    
-        table.setNumberOfRows(CalculatorApp.shared.history.count, withRowType: "HistoryRow")
-        
-        for (index, entry) in CalculatorApp.shared.history.reverse().enumerate()
-        {
-            let row = table.rowControllerAtIndex(index) as! HistoryRowController
-            row.entryLabel.setText(entry)
-        }
     }
     
     override func didDeactivate() {
