@@ -17,8 +17,10 @@
 		333471E11BCE850900D25610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333471E01BCE850900D25610 /* Assets.xcassets */; };
 		333471E81BCE850A00D25610 /* watch-calculator WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 333471E71BCE850A00D25610 /* watch-calculator WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		333471ED1BCE850A00D25610 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333471EC1BCE850A00D25610 /* CalculatorController.swift */; };
-		333471EF1BCE850A00D25610 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333471EE1BCE850A00D25610 /* ExtensionDelegate.swift */; };
+		333471EF1BCE850A00D25610 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333471EE1BCE850A00D25610 /* CalculatorApp.swift */; };
 		333471F11BCE850A00D25610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333471F01BCE850A00D25610 /* Assets.xcassets */; };
+		33E474171BD40B17007DD2B6 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E474161BD40B17007DD2B6 /* HistoryController.swift */; settings = {ASSET_TAGS = (); }; };
+		33E474191BD40CED007DD2B6 /* HistoryRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E474181BD40CED007DD2B6 /* HistoryRowController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,9 +79,11 @@
 		333471E21BCE850900D25610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		333471E71BCE850A00D25610 /* watch-calculator WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch-calculator WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		333471EC1BCE850A00D25610 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
-		333471EE1BCE850A00D25610 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		333471EE1BCE850A00D25610 /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		333471F01BCE850A00D25610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		333471F21BCE850A00D25610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33E474161BD40B17007DD2B6 /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		33E474181BD40CED007DD2B6 /* HistoryRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				333471EC1BCE850A00D25610 /* CalculatorController.swift */,
-				333471EE1BCE850A00D25610 /* ExtensionDelegate.swift */,
+				33E474161BD40B17007DD2B6 /* HistoryController.swift */,
+				33E474181BD40CED007DD2B6 /* HistoryRowController.swift */,
+				333471EE1BCE850A00D25610 /* CalculatorApp.swift */,
 				333471F01BCE850A00D25610 /* Assets.xcassets */,
 				333471F21BCE850A00D25610 /* Info.plist */,
 			);
@@ -294,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333471EF1BCE850A00D25610 /* ExtensionDelegate.swift in Sources */,
+				333471EF1BCE850A00D25610 /* CalculatorApp.swift in Sources */,
+				33E474171BD40B17007DD2B6 /* HistoryController.swift in Sources */,
 				333471ED1BCE850A00D25610 /* CalculatorController.swift in Sources */,
+				33E474191BD40CED007DD2B6 /* HistoryRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +532,7 @@
 				333471F71BCE850A00D25610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		333471F91BCE850A00D25610 /* Build configuration list for PBXNativeTarget "watch-calculator WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +541,7 @@
 				333471FB1BCE850A00D25610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		333471FD1BCE850A00D25610 /* Build configuration list for PBXNativeTarget "watch-calculator" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +550,7 @@
 				333471FF1BCE850A00D25610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

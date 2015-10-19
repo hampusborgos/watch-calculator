@@ -28,14 +28,14 @@ class CalculatorController : WKInterfaceController {
         
         self.setTitle("Calculator")
         
-        NSLog("Activated the Interface Controller")
+        // NSLog("Activated the Interface Controller")
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
         
-        NSLog("Deactivated the Interface Controller")
+        // NSLog("Deactivated the Interface Controller")
     }
     
     
@@ -105,12 +105,18 @@ class CalculatorController : WKInterfaceController {
     @IBAction func enterDot() {
         guard enteredText.characters.last != "." else { return }
         
+        // TODO: Should not allow multiple dots in one number
         appendText(".")
     }
     
     @IBAction func sumTotal() {
         enteredText = String(format: "%.0f", parseLTRExpression(enteredText))
         updateText()
+    }
+    
+    @IBAction func save() {
+        let saveText = String(format: "%@ = %.0f", enteredText, parseLTRExpression(enteredText))
+        CalculatorApp.shared.history.append(saveText)
     }
     
     @IBAction func enterPlus() {
@@ -156,7 +162,7 @@ class CalculatorController : WKInterfaceController {
         
         for c in input.characters
         {
-            if c >= "0" && c <= "9"
+            if (c >= "0" && c <= "9") || c == "."
             {
                 currentNumber.append(c)
             }

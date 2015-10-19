@@ -17,7 +17,7 @@
                                         <label alignment="center" verticalAlignment="center" minimumScaleFactor="0.5" id="rhH-bT-U5H"/>
                                     </items>
                                 </group>
-                                <group width="1" height="29" alignment="left" id="O1k-1r-v3S">
+                                <group width="1" height="26" alignment="left" id="O1k-1r-v3S">
                                     <items>
                                         <button width="0.29999999999999999" height="1" alignment="left" title="1" id="XUb-Jv-63T">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,7 +45,7 @@
                                         </button>
                                     </items>
                                 </group>
-                                <group width="1" height="29" alignment="left" id="Dg9-Xk-f5e">
+                                <group width="1" height="26" alignment="left" id="Dg9-Xk-f5e">
                                     <items>
                                         <button width="0.29999999999999999" height="1" alignment="left" title="4" id="QLM-W1-c5q">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,7 +73,7 @@
                                         </button>
                                     </items>
                                 </group>
-                                <group width="1" height="29" alignment="left" id="VVp-dZ-2TZ">
+                                <group width="1" height="26" alignment="left" id="VVp-dZ-2TZ">
                                     <items>
                                         <button width="0.29999999999999999" height="1" alignment="left" title="7" id="DjA-UA-NnV">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,7 +101,7 @@
                                         </button>
                                     </items>
                                 </group>
-                                <group width="1" height="28" alignment="left" id="aMP-EM-Xh5">
+                                <group width="1" height="25" alignment="left" id="aMP-EM-Xh5">
                                     <items>
                                         <button width="0.29999999999999999" height="1" alignment="left" title="." id="2rC-Iu-6hn">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,6 +139,11 @@
                                     <action selector="sumTotal" destination="AgC-eL-Hgc" id="rpD-wC-eYW"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Save" icon="share" id="FlT-7k-GWq">
+                                <connections>
+                                    <action selector="save" destination="AgC-eL-Hgc" id="hFR-5F-mSw"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Clear" icon="trash" id="Te4-D9-Vbf">
                                 <connections>
                                     <action selector="clear" destination="AgC-eL-Hgc" id="BZf-GP-Twl"/>
@@ -148,10 +153,38 @@
                     </menu>
                     <connections>
                         <outlet property="inputTextLabel" destination="rhH-bT-U5H" id="TtW-rT-T3J"/>
+                        <segue destination="1cN-C2-f7P" kind="relationship" relationship="nextPage" id="F31-hr-PUc"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="338" y="476"/>
+            <point key="canvasLocation" x="338" y="501"/>
+        </scene>
+        <!--HistoryController-->
+        <scene sceneID="COq-V8-j87">
+            <objects>
+                <controller identifier="HistoryController" hidesWhenLoading="NO" id="1cN-C2-f7P" customClass="HistoryController" customModule="watch_calculator_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="6o9-0Z-36x">
+                            <items>
+                                <tableRow identifier="HistoryRow" id="DQ9-67-EYm" customClass="HistoryRowController" customModule="watch_calculator_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="inG-Iq-7Ge">
+                                        <items>
+                                            <label alignment="right" verticalAlignment="center" text="2+2 = 3" id="xAX-zU-N3F"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="entryLabel" destination="xAX-zU-N3F" id="szb-rU-9ke"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="6o9-0Z-36x" id="KMN-vj-CSz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="338" y="786"/>
         </scene>
     </scenes>
 </document>

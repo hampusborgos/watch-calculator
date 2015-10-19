@@ -8,10 +8,25 @@
 
 import WatchKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+class CalculatorApp : NSObject, WKExtensionDelegate {
+    static var shared : CalculatorApp!
+    
+    var history : [String] = []
+    
+    override init()
+    {
+        super.init()
+        
+        history.append("2 + 2 = 4")
+        history.append("3 + 3 = 6")
+    }
+    
     func applicationDidFinishLaunching() {
+        assert(CalculatorApp.shared == nil)
+        CalculatorApp.shared = self
+        
         // Perform any final initialization of your application.
+        WKExtension.sharedExtension()
     }
 
     func applicationDidBecomeActive() {
